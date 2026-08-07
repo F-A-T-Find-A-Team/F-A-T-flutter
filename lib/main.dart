@@ -1,21 +1,10 @@
 import 'package:flutter/material.dart';
-
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'F.A.T',
-      theme: ThemeData(
-        primarySwatch: Colors.orange,
-      ),
-      debugShowCheckedModeBanner: false,
-      home: const DeliveryWidget(),
-    );
-  }
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'app.dart';
+void main() async{
+  runApp(
+    ProviderScope(
+      child: FATApp(),
+    ),
+  );
 }
